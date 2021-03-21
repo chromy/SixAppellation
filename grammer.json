@@ -947,9 +947,9 @@
   ],
 
   "setGender":[
-    "[they:she][them:her][their:her][theirs:hers][epithetVerb:#epithetPluralVerb#]",
-    "[they:he][them:him][their:his][theirs:his][epithetVerb:#epithetPluralVerb#]",
-    "[they:they][them:them][their:their][theirs:theirs][epithetVerb:#epithetSingularVerb#]"
+    "[they:she][them:her][their:her][theirs:hers]#setSingularSubject#",
+    "[they:he][them:him][their:his][theirs:his]#setSingularSubject#",
+    "[they:they][them:them][their:their][theirs:theirs]#setPluralSubject#"
   ],
 
   "classyName": [
@@ -959,8 +959,7 @@
   ],
 
   "name": [
-    "#number# #thing#",
-    "#number# #thing# #useNameClause#"
+    "#number# #thing#"
   ],
 
   "highTitle": [
@@ -976,9 +975,16 @@
     "Tlaxlauim"
   ],
 
-  "epithetSingularVerb": [
-    "fill",
-    "drown",
+  "epithetPluralPrepositionalVerb": [
+    "[epithetPreposition:with]fill",
+    "[epithetPreposition:in]drown"
+  ],
+
+  "epithetSingularPrepositionalVerb": [
+    "#epithetPluralPrepositionalVerb.s#"
+  ],
+
+  "epithetPluralVerb": [
     "illuminate",
     "expand",
     "shrink",
@@ -989,8 +995,8 @@
     "awe"
   ],
 
-  "epithetPluralVerb": [
-    "#epithetSingularVerb.s#"
+  "epithetSingularVerb": [
+    "#epithetPluralVerb.s#"
   ],
 
   "epithetObject": [
@@ -1005,13 +1011,19 @@
     "nature"
   ],
 
+  "epithetObject2": [
+    "blooms",
+    "patterns",
+    "power",
+    "poems",
+    "prose",
+    "song",
+    "music",
+    "math",
+    "logic"
+  ],
+
   "epithetEnd": [
-    "in blooms",
-    "with patterns",
-    "with poems",
-    "in dreams",
-    "in words",
-    "entire",
     "microscopically",
     "minimally",
     "optimally",
@@ -1044,9 +1056,32 @@
     "he who writes patterns into the world"
   ],
 
+  "epithetVerb": [
+    "#epithetSingularVerb#",
+    "#epithetPluralVerb#"
+  ],
+
+  "epithetPrepositionalVerb": [
+    "#epithetSingularPrepositionalVerb#",
+    "#epithetPluralPrepositionalVerb#"
+  ],
+
+  "epithetVerbPhrase": [
+    "#epithetVerb# #epithetObject#",
+    "#epithetPrepositionalVerb# #epithetObject# #epithetPreposition# #epithetObject2#"
+  ],
+
+  "setSingularSubject": [
+    "[epithetVerb:#epithetSingularVerb#][epithetPrepositionalVerb:#epithetSingularPrepositionalVerb#]"
+  ],
+
+  "setPluralSubject": [
+    "[epithetVerb:#epithetPluralVerb#][epithetPrepositionalVerb:#epithetPluralPrepositionalVerb#]"
+  ],
+
   "epithet": [
-    "whose #maybeAdjective##presence# #epithetSingularVerb# #epithetObject# #epithetEnd#",
-    "(#they.capitalize# who #epithetVerb# #epithetObject# #epithetEnd#)"
+    "whose#setSingularSubject# #maybeAdjective##presence# #epithetVerbPhrase#",
+    "(#they.capitalize# who #epithetVerbPhrase#)"
   ],
 
   "testEpithet": [
@@ -1055,13 +1090,13 @@
 
   "fullName": [
     "#name#",
-    "#name#",
-    "#name#",
+    "#name# #useNameClause#",
     "#their.capitalize# Brilliance #classyName#",
-    "#their.capitalize# Excellency <i>ezuazuacat</i> #classyName#",
-    "#their.capitalize# Excellency <i>ezuazuacat</i> #classyName# #epithet#",
-    "<i>#highTitle#</i> #name# #epithet#",
-    "<i>#title#</i> #name#"
+    "#their.capitalize# Excellency ezuazuacat #classyName#",
+    "#their.capitalize# Excellency ezuazuacat #classyName# #epithet#",
+    "#highTitle# #name# #epithet#",
+    "#title# #name#",
+    "#title# #name# #useNameClause#"
   ],
 
   "origin": [
