@@ -34,7 +34,6 @@
     "Scabious",
     "Marguerite",
     "Vervain",
-    "Bluebottle",
     "Centaury",
     "Effloresce",
     "Delphinium",
@@ -74,7 +73,6 @@
     "Achimenes",
     "Bellwort",
     "Pilewort",
-    "Blue daisy",
     "Bartonia",
     "Filago",
     "Arum lily",
@@ -85,8 +83,7 @@
     "Slipperwort",
     "Sowbread",
     "Streptocarpus",
-    "Ursinia",
-    "Blue marguerite"
+    "Ursinia"
   ],
 
   "plant": [
@@ -734,7 +731,7 @@
     "Grave",
     "Ground",
     "Guess",
-    "Hair",
+    "Strand",
     "Hang",
     "Haunt",
     "Kast",
@@ -758,7 +755,8 @@
   ],
 
   "useNameClause": [
-    "à '#useName#'"
+    "à '#useName#'",
+    "sometime called '#useName#'"
   ],
 
   "tool": [
